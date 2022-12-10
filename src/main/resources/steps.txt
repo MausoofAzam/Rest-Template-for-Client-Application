@@ -1,0 +1,49 @@
+
+STeps to Consume rest API
+
+step:1 find the API and it  detail you want to consume.
+ex:https://jsonplaceholder.typicode.com/
+Routes
+All HTTP methods are supported. You can use http or https for your requests.
+
+GET	/posts
+GET	/posts/1
+GET	/posts/1/comments
+GET	/comments?postId=1
+POST	/posts
+PUT	/posts/1
+PATCH	/posts/1
+DELETE	/posts/1
+
+Step:2 focus on Request Payload and Response Payload.
+
+note: pojo class is not needed here./ not required optional.
+ but we will make pojo class
+ 
+   "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit.
+       
+       
+Note: Sometime Request Payload and Response Payload might be different.
+
+Step:3 create Rest Controller to make Api call.
+
+step:4 make a Bean in Bootstrap class
+@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
+
+step:5 Read api documentation before making any APi call.
+
+Question:
+	
+	@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
+	
+	why we create  or use rest Template Bean??
+	Ans: to create/make client application.
